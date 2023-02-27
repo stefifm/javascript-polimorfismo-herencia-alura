@@ -18,7 +18,8 @@
       "standard"
     ],
     "rules": {
-      "accessor-pairs":"off"
+      "accessor-pairs":"off",
+      "no-useless-constructor": "off"
     }
   }
 }
