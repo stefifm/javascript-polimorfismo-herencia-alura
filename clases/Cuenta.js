@@ -1,13 +1,24 @@
+import Cliente from './Cliente.js'
+
 class Cuenta {
   #cliente
   #saldoCuenta
 
-  constructor (tipo, cliente, numeroCuenta, agencia, saldoCuenta) {
-    this.tipo = tipo
+  constructor (cliente, numeroCuenta, agencia, saldoCuenta) {
     this.numeroCuenta = numeroCuenta
     this.agencia = agencia
     this.#cliente = cliente
     this.#saldoCuenta = saldoCuenta
+  }
+
+  set setCliente (valor) {
+    if (valor instanceof Cliente) {
+      this.#cliente = valor
+    }
+  }
+
+  get getCliente () {
+    return this.#cliente
   }
 
   depositoCuenta (valor) {
@@ -16,11 +27,6 @@ class Cuenta {
   }
 
   retirarCuenta (valor) {
-    if (this.tipo === 'Corriente') {
-      valor = valor * 1.05
-    } else if (this.tipo === 'Ahorro') {
-      valor = valor * 1.02
-    }
     if (valor <= this.#saldoCuenta) { this.#saldoCuenta -= valor }
     return this.#saldoCuenta
   }
@@ -32,6 +38,10 @@ class Cuenta {
   transferirParaCuenta (valor, cuentaDestino) {
     this.retirarCuenta(valor)
     cuentaDestino.depositoCuenta(valor)
+  }
+
+  prueba () {
+    console.log('Método padre')
   }
 }
 
