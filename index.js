@@ -1,6 +1,7 @@
 import CuentaCorriente from './clases/CuentaCorriente.js'
 import CuentaAhorro from './clases/CuentaAhorro.js'
 import Cliente from './clases/Cliente.js'
+import CuentaNomina from './clases/CuentaNomina.js'
 
 /* CREANDO OBJETO CLIENTE */
 
@@ -14,16 +15,16 @@ const cuentaLeondardo = new CuentaCorriente(cliente, '1', '001')
 /* CREANDO OBJETO CUENTA AHORRO */
 const cuentaAhorroLeonardo = new CuentaAhorro(cliente, '9985', '001', 0)
 
-/* MOSTRANDO LAS CUENTAS Y OPERACIONES */
+const cuentaNominaLeonardo = new CuentaNomina(cliente, '9854', '001', 100)
+
+/* MOSTRANDO CUENTAS */
 console.log(cuentaLeondardo)
-
-cuentaLeondardo.depositoCuenta(150)
-console.log(cuentaLeondardo.mostrarSaldo())
-cuentaLeondardo.retirarCuenta(70)
-console.log(cuentaLeondardo.mostrarSaldo())
-
 console.log(cuentaAhorroLeonardo)
-cuentaAhorroLeonardo.depositoCuenta(200)
-console.log(cuentaAhorroLeonardo.mostrarSaldo())
-cuentaAhorroLeonardo.retirarCuenta(120)
-console.log(cuentaAhorroLeonardo.mostrarSaldo())
+console.log(cuentaNominaLeonardo)
+
+/* OPERACIONES CON MÉTODOS ABSTRACTOS */
+
+cuentaNominaLeonardo.depositoCuenta(150)
+console.log(cuentaNominaLeonardo.mostrarSaldo())
+cuentaNominaLeonardo.retirarCuenta(50)
+console.log(cuentaNominaLeonardo.mostrarSaldo())

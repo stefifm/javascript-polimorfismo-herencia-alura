@@ -5,6 +5,9 @@ class Cuenta {
   #saldoCuenta
 
   constructor (cliente, numeroCuenta, agencia, saldoCuenta) {
+    if (this.constructor === Cuenta) {
+      throw new Error('No se pueden instanciar desde la clase Cuenta')
+    }
     this.numeroCuenta = numeroCuenta
     this.agencia = agencia
     this.#cliente = cliente
@@ -26,9 +29,9 @@ class Cuenta {
     return this.#saldoCuenta
   }
 
-  // Para retiros de dinero que no requieran comisión
+  // Método abstracto
   retirarCuenta (valor) {
-    this._retirarCuenta(valor, 0)
+    throw new Error('Debe implementar retirarCuenta en su clase')
   }
 
   // Para retiros de dinero que si es necesario la aplicación de
