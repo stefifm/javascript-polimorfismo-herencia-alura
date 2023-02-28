@@ -26,7 +26,16 @@ class Cuenta {
     return this.#saldoCuenta
   }
 
+  // Para retiros de dinero que no requieran comisión
   retirarCuenta (valor) {
+    this._retirarCuenta(valor, 0)
+  }
+
+  // Para retiros de dinero que si es necesario la aplicación de
+  // una comisión
+
+  _retirarCuenta (valor, comision) {
+    valor = valor * (1 + comision / 100)
     if (valor <= this.#saldoCuenta) { this.#saldoCuenta -= valor }
     return this.#saldoCuenta
   }
@@ -38,10 +47,6 @@ class Cuenta {
   transferirParaCuenta (valor, cuentaDestino) {
     this.retirarCuenta(valor)
     cuentaDestino.depositoCuenta(valor)
-  }
-
-  prueba () {
-    console.log('Método padre')
   }
 }
 

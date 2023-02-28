@@ -15,17 +15,15 @@ const cuentaLeondardo = new CuentaCorriente(cliente, '1', '001')
 const cuentaAhorroLeonardo = new CuentaAhorro(cliente, '9985', '001', 0)
 
 /* MOSTRANDO LAS CUENTAS Y OPERACIONES */
-// console.log(cuentaLeondardo)
+console.log(cuentaLeondardo)
 
-// cuentaLeondardo.depositoCuenta(150)
-// console.log(cuentaLeondardo.mostrarSaldo())
-// cuentaLeondardo.retirarCuenta(70)
-// console.log(cuentaLeondardo.mostrarSaldo())
+cuentaLeondardo.depositoCuenta(150)
+console.log(cuentaLeondardo.mostrarSaldo())
+cuentaLeondardo.retirarCuenta(70)
+console.log(cuentaLeondardo.mostrarSaldo())
 
-// console.log(cuentaAhorroLeonardo)
-// cuentaAhorroLeonardo.depositoCuenta(200)
-// console.log(cuentaAhorroLeonardo.mostrarSaldo())
-// cuentaAhorroLeonardo.retirarCuenta(120)
-// console.log(cuentaAhorroLeonardo.mostrarSaldo())
-
-cuentaLeondardo.prueba()
+console.log(cuentaAhorroLeonardo)
+cuentaAhorroLeonardo.depositoCuenta(200)
+console.log(cuentaAhorroLeonardo.mostrarSaldo())
+cuentaAhorroLeonardo.retirarCuenta(120)
+console.log(cuentaAhorroLeonardo.mostrarSaldo())
