@@ -15,6 +15,7 @@ class Cliente {
     this.#clave = clave
   }
 
+  // Aplicando polimorfismo e interfaz
   autenticable (clave) {
     return clave === this.#clave
   }

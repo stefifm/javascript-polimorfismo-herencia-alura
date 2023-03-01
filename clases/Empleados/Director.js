@@ -5,6 +5,7 @@ class Director extends Empleado {
     super(nombre, dni, salario)
   }
 
+  // Método heredado y sobreescrito
   mostrarBonificacion () {
     const bono = 10
     return super._mostrarBonificacion(bono)

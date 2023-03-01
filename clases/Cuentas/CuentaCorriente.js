@@ -8,6 +8,7 @@ class CuentaCorriente extends Cuenta {
     CuentaCorriente.cantidadCuentas++
   }
 
+  // Método heredado
   retirarCuenta (valor) {
     super._retirarCuenta(valor, 5)
   }

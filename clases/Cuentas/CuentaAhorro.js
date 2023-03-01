@@ -5,6 +5,7 @@ class CuentaAhorro extends Cuenta {
     super(cliente, numeroCuenta, agencia, saldoCuenta)
   }
 
+  // Método heredado
   retirarCuenta (valor) {
     super._retirarCuenta(valor, 2)
   }

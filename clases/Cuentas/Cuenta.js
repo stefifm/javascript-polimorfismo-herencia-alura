@@ -5,6 +5,7 @@ class Cuenta {
   #saldoCuenta
 
   constructor (cliente, numeroCuenta, agencia, saldoCuenta) {
+    // Declarar que clase Cuenta es una clase abstracta
     if (this.constructor === Cuenta) {
       throw new Error('No se pueden instanciar desde la clase Cuenta')
     }
@@ -34,7 +35,7 @@ class Cuenta {
     throw new Error('Debe implementar retirarCuenta en su clase')
   }
 
-  // Para retiros de dinero que si es necesario la aplicación de
+  // Para retiros de dinero donde si es necesario la aplicación de
   // una comisión
 
   _retirarCuenta (valor, comision) {

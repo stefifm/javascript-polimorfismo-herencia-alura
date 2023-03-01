@@ -14,10 +14,12 @@ class Empleado {
     this.#clave = ''
   }
 
+  // Método abstracto
   mostrarBonificacion () {
     throw new Error('Este método debe usarse en las clases hijas')
   }
 
+  // Método privado
   _mostrarBonificacion (bono) {
     return this.#salario + (this.#salario * bono / 100)
   }
@@ -26,6 +28,7 @@ class Empleado {
     this.#clave = clave
   }
 
+  // Aplicando polimorfismo e interfaz
   autenticable (clave) {
     return clave === this.#clave
   }
