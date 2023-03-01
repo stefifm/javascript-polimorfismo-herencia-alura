@@ -10,7 +10,7 @@ Es una continuación al curso de [JavaScript: Introducción a la Orientación a 
 - Métodos abstractos
 - Verificación de propiedades y tipos
 - Métodos privados y protegidos
-- Accesediendo y sobreescribiendo métodos del padre
+- Accediendo y sobreescribiendo métodos del padre
 - Métodos estáticos
 
 ### Cosas nuevas del proyecto Banco Popular
